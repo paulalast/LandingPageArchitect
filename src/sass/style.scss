@@ -1,5 +1,5 @@
-$primary-color: #2979ff;
-$secondary-color: #557abe;
+$primary-color: #266ae1;
+$secondary-color: #0847bb;
 
 * {
 	margin: 0;
@@ -22,7 +22,7 @@ header {
 	width: 100vw;
 	height: 100vh;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.859), rgb(0, 0, 0)),
-		url("/dist/img/hero.jpeg");
+		url("./../dist/img/hero.jpeg");
 	background-size: cover;
 	background-position: center;
 	opacity: 0.97;
@@ -86,7 +86,9 @@ main {
 }
 
 section {
+	min-height: 60vh;
 	margin-bottom: 80px;
+	border-radius: 3px;
 }
 
 section h2 {
@@ -98,6 +100,89 @@ section p {
 	font-size: 18px;
 	line-height: 1.5;
 	margin-bottom: 40px;
+}
+.our-company {
+	padding: 50px;
+	text-align: justify;
+	&-content {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	h2 {
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 18px;
+		line-height: 1.5;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		margin-right: 40px;
+		letter-spacing: 1.2px;
+	}
+	img {
+		margin: 0 20px;
+		filter: saturate(0);
+
+		opacity: 0.9;
+		border-radius: 3px;
+		width: 50%;
+		height: 100%;
+		box-shadow: 1px 3px 3px 1px black;
+		transition: filter 0.3s ease-in-out;
+	}
+	img:hover {
+		filter: saturate(0.9);
+	}
+}
+
+.team {
+	display: flex;
+	flex-direction: column;
+	// background-color: #00000010;
+	align-content: center;
+	padding: 50px;
+	justify-content: space-evenly;
+	&-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	&-member {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: transform 0.3s ease-in-out;
+		img {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+		h3 {
+			font-weight: bold;
+			margin-top: 20px;
+		}
+		p {
+			font-style: italic;
+			margin-top: 5px;
+		}
+	}
+	&-member:hover {
+		transform: scale(1.2);
+	}
+}
+.team::before {
+	display: flex;
+	position: absolute;
+	content: "";
+	width: 100vw;
+	min-height: 60vh;
+	z-index: -1000;
+	left: 0;
+	right: 0;
+	margin: 0;
+	background-color: #00000010;
 }
 
 .form-group {
@@ -130,13 +215,19 @@ form input,
 form textarea {
 	padding: 10px;
 	font-size: 16px;
-	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 300px;
+
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-sizing: border-box;
 }
+.textarea {
+	min-height: 100px;
+}
 
-form button[type="submit"] {
+.submit {
 	padding: 10px 20px;
 	background-color: $primary-color;
 	color: #fff;
@@ -156,9 +247,13 @@ footer {
 	text-align: center;
 }
 .our-services {
+	padding: 50px ;
 	width: 100%;
+	h2 {
+		padding: 10px;
+	}
 	p {
-		text-align: center;
+		padding: 10px;
 	}
 }
 .slider {
@@ -169,7 +264,7 @@ footer {
 	align-self: center;
 	width: 100%;
 	margin: 0;
-	padding: 0;
+	padding: 0 ;
 	margin-bottom: 50px;
 	border-radius: 3px;
 	&-item {
@@ -178,7 +273,7 @@ footer {
 		flex-direction: column;
 		height: 700px;
 		width: 100%;
-		padding: 10px;
+		padding: -10px;
 		text-align: center;
 		overflow: hidden;
 		h2 {
@@ -188,10 +283,11 @@ footer {
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			background-color: rgb(255, 255, 255);
+			background-color: rgba(255, 255, 255, 0.595);
 			padding: 20px;
 			z-index: 1001;
 			letter-spacing: 2px;
+		
 		}
 		.carousel-img {
 			position: absolute;
@@ -206,12 +302,16 @@ footer {
 			position: absolute;
 			margin-top: 100px;
 			font-size: 16px;
+			width: 100%;
+		
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			z-index: 1010;
-			background-color: rgba(255, 255, 255, 0.839);
-			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.567);
+			color: #ffffff;
+			padding: 30px;
+			
 			letter-spacing: 2px;
 		}
 	}

@@ -14,7 +14,7 @@
         href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="/dist/css/style.min.css">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
 
 
     <title>Architect Company | Home</title>
@@ -22,7 +22,7 @@
 
 <body>
     <header>
-        <img class="header-img" src="/dist/img/2.jpeg" alt="Header Image">
+        <img class="header-img" src="./dist/img/2.jpeg" alt="Header Image">
         <div class="header-text">
             <h1>Welcome to Our Architect Company</h1>
             <p>We offer high-quality services for all your architectural needs.
@@ -33,6 +33,53 @@
         </div>
     </header>
     <main>
+        <section class="our-company">
+            <h2>Our Company</h2>
+            <div class="our-company-content">
+                <img src="./dist/img/construction-management.jpeg" alt="">
+                <p>At Architect Company, we are a team of highly skilled and
+                    dedicated
+                    architects who are committed to providing exceptional design
+                    solutions to our clients. Our passion for innovative design
+                    and
+                    unwavering attention to detail distinguish us from others in
+                    our
+                    field. <br> <br>
+                    We believe that good design is about more than just
+                    aesthetics.
+                    It is about creating functional and sustainable spaces that
+                    meet
+                    the needs and aspirations of our clients. That is why we
+                    take a
+                    collaborative approach to our projects, working closely with
+                    our
+                    clients to understand their unique requirements and develop
+                    customized solutions that deliver the best results.</p>
+            </div>
+
+        </section>
+        <section id="team" class="team">
+            <h2>Our Team</h2>
+            <p>Meet the members of our talented and dedicated team:</p>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="./dist/img/team-member-1.jpeg" alt="Team Member 1">
+                    <h3>Anna Ken</h3>
+                    <p>CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="./dist/img/team-member-2.jpg" alt="Team Member 2">
+                    <h3>Jack Dew</h3>
+                    <p>Architect</p>
+                </div>
+                <div class="team-member">
+                    <img src="./dist/img/team-member-3.jpg" alt="Team Member 3">
+                    <h3>Kate Lake</h3>
+                    <p>Architect</p>
+                </div>
+            </div>
+        </section>
+
         <section class="our-services">
             <h2>Our Services</h2>
             <p>We offer a variety of services to meet all your architectural
@@ -43,7 +90,7 @@
                 <div class="slider-item">
                     <h2>Architectural Design</h2>
                     <img class="carousel-img"
-                        src="/dist/img/architectural-design.jpeg"
+                        src="./dist/img/architectural-design.jpeg"
                         alt="Architectural Design">
                     <p>Our team of experienced architects will work with you to
                         bring your vision to life.</p>
@@ -51,7 +98,7 @@
                 <div class="slider-item">
                     <h2>Construction Management</h2>
                     <img class="carousel-img"
-                        src="/dist/img/construction-management.jpeg"
+                        src="./dist/img/construction-management.jpeg"
                         alt="Construction Management">
                     <p>We provide comprehensive construction management services
                         to ensure the smooth execution of your project.</p>
@@ -59,7 +106,7 @@
                 <div class="slider-item">
                     <h2>Project Planning and Scheduling</h2>
                     <img class="carousel-img"
-                        src="/dist/img/project-planning-and-scheduling.jpeg"
+                        src="./dist/img/project-planning-and-scheduling.jpeg"
                         alt="Project Planning and Scheduling">
                     <p>Our project planning and scheduling services ensure that
                         your project stays on track and on budget.</p>
@@ -67,12 +114,10 @@
 
             </div>
         </section>
-        <section>
-            <h2>About Us</h2>
-            <p>We are a team of experienced architects committed to delivering
-                high-quality solutions to our clients. Our passion for design
-                and attention to detail sets us apart from the rest.</p>
-        </section>
+
+
+
+
         <section id="contact" class="form-group">
             <h2>Get in Touch</h2>
             <form action="your-form-submit-url">
@@ -86,22 +131,25 @@
                 </div>
                 <div>
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea class="textarea" rows="4" cols="50" resize="none"
+                        id="message" name="message"></textarea>
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button type="button" class="submit">Submit</button>
                 </div>
             </form>
         </section>
     </main>
     <footer>
-        <p>Copyright &copy; 2023 Your Company Name</p>
+        <p class="footer__text">Copyright &copy; <span class="footer__year">
+            </span> Architect Company</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <!-- <script src="/dist/js/script.min.js"></script> -->
+    <script src="./dist/js/script.min.js"></script>
+    <script src="./dist/js/form.min.js"></script>
     <script type="text/javascript"
         src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>$(document).ready(function () {
@@ -114,7 +162,7 @@
                 autoplay: true,
                 autoplaySpeed: 3000,
                 draggable: true,
-              
+
 
             })
         })
