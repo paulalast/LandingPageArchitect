@@ -374,6 +374,8 @@ footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: rgba;
   background-color: rgba(255, 255, 255, 0.595);
   padding: 20px;
   z-index: 1001;
